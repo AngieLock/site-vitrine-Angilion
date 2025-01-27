@@ -1,0 +1,61 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #2a9d8f;
+    /* Remplace par ton vert spécifique */
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+// Variable pour la couleur personnalisée
+$custom-green: #85937B;
+
+// Application de la couleur personnalisée
+.text-customGreen {
+    color: $custom-green;
+}
+
+button {
+    color: $custom-green;
+
+    &:hover {
+        color: darken($custom-green, 10%);
+    }
+}
+
+ul {
+    li a {
+        color: $custom-green;
+
+        &:hover {
+            background-color: lighten($custom-green, 40%);
+        }
+    }
+}
+
+.menu-dropdown {
+    position: absolute;
+    /* ou 'relative', selon le contexte */
+    top: 100%;
+    /* Place le menu juste en dessous du bouton */
+    left: 10;
+    background-color: white;
+    /* Ou une autre couleur de fond */
+    z-index: 1000;
+    /* S'assure que le menu est au-dessus du contenu */
+    width: 200px;
+    /* Ajuste la largeur si nécessaire */
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

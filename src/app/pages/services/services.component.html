@@ -1,0 +1,61 @@
+<app-header></app-header>
+
+<section class="services py-16 bg-gradient-to-b from-gray-50 to-gray-100">
+    <div class="container mx-auto px-6 lg:px-20">
+        <h2 class="text-4xl font-extrabold text-center text-gray-800 mb-20 mt-12">
+            Boostez Votre Activité Avec Nos Services Sur-Mesure
+        </h2>
+        <p class="text-2xl text-center mb-20">
+            Vous êtes artisan ou indépendant ? Découvrez nos services conçus pour optimiser votre activité,
+            simplifier vos démarches et booster votre visibilité. Que vous ayez besoin de conseils stratégiques,
+            d’outils performants, ou d’un accompagnement personnalisé, nous sommes là pour vous guider vers le succès.
+        </p>
+        <div class="grid grid-cols-2 gap-16 mb-12">
+            <!-- Cartes des services -->
+            <div *ngFor="let service of services; let i = index"
+                class="bg-white rounded-lg shadow-lg border-t-4 border-[#9c544e] p-6 transition-transform hover:scale-105"
+                [ngClass]="{'border-t-[#7b423b]': expanded[i]}">
+                <!-- Titre avec icône -->
+                <div class="cursor-pointer flex items-center space-x-4" (click)="toggleText(i)">
+                    <div class="flex-shrink-0">
+                        <span [innerHTML]="getServiceIcon(service.icon)"></span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-[#9c544e]">{{ service.title }}</h3>
+                    <span class="text-[#9c544e] text-2xl transform transition-transform duration-300"
+                        [style.transform]="expanded[i] ? 'rotate(180deg)' : 'rotate(0deg)'">
+                        ▼
+                    </span>
+                </div>
+                <div class="overflow-hidden transition-all duration-300 mt-4"
+                    [style.maxHeight]="expanded[i] ? '1000px' : '0'" [style.opacity]="expanded[i] ? '1' : '0'">
+                    <p class="text-gray-700 text-sm leading-relaxed mb-4">
+                        {{ service.description }}
+                    </p>
+                    <ul class="list-disc pl-4 text-gray-600 text-sm space-y-1">
+                        <li *ngFor="let item of service.list">{{ item }}</li>
+                    </ul>
+                    <a href="mailto:contact@angilion.com"
+                        class="mt-8 inline-block bg-[#9c544e] text-white px-6 py-3 rounded-lg hover:bg-[#763c32] transition">
+                        En discuter
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact py-16 bg-[#9c544e] text-white">
+    <div class="container mx-auto px-4 text-center">
+        <a routerLink="/contact">
+            <h2 class="text-4xl font-bold mb-8">Contactez-nous</h2>
+        </a>
+        <p class="mb-4">Besoin de plus d'informations ? N'hésitez pas à nous écrire.</p>
+        <a href="mailto:contact@angilion.com"
+            class="inline-block bg-white text-[#9c544e] px-6 py-3 rounded-lg hover:bg-gray-200 transition">
+            Contactez-nous gratuitement dès aujourd'hui
+        </a>
+    </div>
+</section>
+
+<app-footer></app-footer>
