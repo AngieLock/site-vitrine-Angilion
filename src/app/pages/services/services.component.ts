@@ -48,10 +48,21 @@ export class ServicesComponent {
     const index = serviceMap[id];
     if (index !== undefined) {
       this.expanded[index] = true; // Dérouler le service correspondant
+
+      window.scrollTo(0, 0);
+
       setTimeout(() => {
         const element = document.getElementById(id);
-        element?.scrollIntoView({ behavior: 'smooth' });
-      }, 100); // Attendre un court instant pour s'assurer que le DOM est prêt
+        if (element) {
+          // Calculer le décalage pour compenser un header fixe
+          const yOffset = -80; // Ajustez cette valeur selon la hauteur du header
+          const y =
+            element.getBoundingClientRect().top + window.scrollY + yOffset;
+
+          // Effectuer un défilement fluide
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+      }, 150);
     }
   }
 

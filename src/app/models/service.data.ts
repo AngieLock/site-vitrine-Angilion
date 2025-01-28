@@ -2,6 +2,7 @@ import { Service } from '../models/service.model';
 
 export const SERVICES: Service[] = [
     {
+        id: 'optimisation',
         title: 'Boostez l’efficacité de votre entreprise',
         description: 'Découvrez comment nos diagnostics complets et méthodologies modernes, comme l’agilité, peuvent transformer votre organisation. Gagnez en fluidité, productivité et satisfaction au travail. Exemples de solutions :',
         list: ['Analyse approfondie de votre organisation',
@@ -13,6 +14,7 @@ export const SERVICES: Service[] = [
 </svg>`
     },
     {
+        id: 'logiciels',
         title: 'Des outils adaptés à vos besoins, sans tracas',
         description: 'Profitez de notre expertise pour choisir, installer et maîtriser les logiciels essentiels à votre activité : CRM, ERP ou outils collaboratifs. Restez à la pointe grâce à notre veille technologique. Ce que nous faisons :',
         list: ['Étude comparative et recommandations sur mesure',
@@ -24,6 +26,7 @@ export const SERVICES: Service[] = [
 </svg>`
     },
     {
+        id: 'dashboards',
         title: 'Transformez vos données en décisions stratégiques',
         description: 'Grâce à nos dashboards personnalisés et nos formations, exploitez vos données pour des prises de décisions éclairées et gagnez en autonomie sur l’analyse de vos performances. Nos services comprennent :',
         list: ['Création de tableaux de bord sur mesure',
@@ -36,6 +39,7 @@ export const SERVICES: Service[] = [
 </svg>`
     },
     {
+        id: 'prestataires',
         title: 'Nous gérons vos projets IT, vous vous concentrez sur votre activité',
         description: 'Bénéficiez de notre expertise pour coordonner vos projets informatiques et web avec des prestataires fiables, tout en garantissant qualité et conformité. Nos engagements :',
         list: ['Gestion de projet complète (web, IT)',
@@ -47,6 +51,7 @@ export const SERVICES: Service[] = [
 </svg>`
     },
     {
+        id: 'marketing',
         title: 'Attirez plus de clients grâce à notre expertise digitale',
         description: 'Nous travaillons sur votre image en ligne, votre référencement (SEO) et vos campagnes pour maximiser votre impact et atteindre de nouveaux clients. Services proposés :',
         list: ['Audit complet de votre présence en ligne',
@@ -58,16 +63,18 @@ export const SERVICES: Service[] = [
 </svg>`
     },
     {
+        id: 'formations',
         title: 'Un accompagnement continu pour rester au top',
         description: 'Formez vos équipes, accédez à des mises à jour régulières et bénéficiez d’un support client dédié pour une activité toujours performante. Nos solutions :',
         list: ['Formations continues sur les outils et tendances',
             'Support technique et accompagnement',
-            'Mises à jour continues pour rester à jour',],
+            'Mises à jour continues',],
         icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
 <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
 </svg>`
     },
     {
+        id: 'pack',
         title: 'Packs à la carte',
         description: 'Choisissez des solutions clés en main adaptées à vos besoins :',
         list: ['Démarches administratives simplifiées',
