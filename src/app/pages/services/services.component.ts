@@ -49,14 +49,15 @@ export class ServicesComponent {
     if (index !== undefined) {
       this.expanded[index] = true; // Dérouler le service correspondant
 
-      //window.scrollTo(0, 0);
+      window.scrollTo(0, 200);
 
       setTimeout(() => {
         const element = document.getElementById(id);
         element?.scrollIntoView({ behavior: 'smooth' });
       }, 100); // Attendre un court instant pour s'assurer que le DOM est prêt
     }
-  } toggleText(index: number): void {
+  }
+  toggleText(index: number): void {
     // Basculer l'état pour l'élément cliqué
     this.expanded[index] = !this.expanded[index];
   }

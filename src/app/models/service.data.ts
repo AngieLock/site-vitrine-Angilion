@@ -40,7 +40,7 @@ export const SERVICES: Service[] = [
     },
     {
         id: 'prestataires',
-        title: 'Nous gérons vos projets IT, vous vous concentrez sur votre activité',
+        title: 'Nous gérons vos projets IT pendant que vous vous concentrez sur votre activité',
         description: 'Bénéficiez de notre expertise pour coordonner vos projets informatiques et web avec des prestataires fiables, tout en garantissant qualité et conformité. Nos engagements :',
         list: ['Gestion de projet complète (web, IT)',
             'Rédaction de cahiers des charges précis',
@@ -53,11 +53,10 @@ export const SERVICES: Service[] = [
     {
         id: 'marketing',
         title: 'Attirez plus de clients grâce à notre expertise digitale',
-        description: 'Nous travaillons sur votre image en ligne, votre référencement (SEO) et vos campagnes pour maximiser votre impact et atteindre de nouveaux clients. Services proposés :',
+        description: 'Nous vous conseillons sur votre image en ligne, votre référencement (SEO) et vos campagnes pour maximiser votre impact et atteindre de nouveaux clients. Services proposés :',
         list: ['Audit complet de votre présence en ligne',
             'Création d’une stratégie SEO performante',
-            'Design et développement de votre identité visuelle',
-            'Campagnes publicitaires ciblées',],
+            'Conseil sur le développement de votre identité visuelle'],
         icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
 <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
 </svg>`
@@ -79,6 +78,7 @@ export const SERVICES: Service[] = [
         description: 'Choisissez des solutions clés en main adaptées à vos besoins :',
         list: ['Démarches administratives simplifiées',
             'Conseils pour structurer vos devis, factures, et canaux de communication',
+            'Accompagnement dans la mise en place de nouveau logiciel',
             'Accompagnement dans l’évolution de votre entreprise (SEO, site internet, etc)',],
         icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
 <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m3.75 9v6m3-3H9m1.5-12H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
