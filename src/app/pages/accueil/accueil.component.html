@@ -1,8 +1,10 @@
 <app-header></app-header>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<section class="hero h-screen bg-cover bg-center text-white flex items-center justify-center relative"
+<section
+    class="hero relative min-h-screen bg-cover bg-center text-white flex items-center justify-center overflow-hidden"
     style="background-image: url('assets/background_desk-954_1280.jpg')">
+
     <!-- Sommaire Section -->
     <div class="sommaire absolute top-8 left-0 w-full flex justify-center space-x-20 z-10">
 
@@ -10,36 +12,35 @@
             class="mt-8 inline-block bg-[#9c544e] text-white px-6 py-3 rounded-lg hover:bg-[#763c32] transition">
             Accueil
         </a>
-
         <a routerLink="/services"
             class="mt-8 inline-block bg-[#9c544e] text-white px-6 py-3 rounded-lg hover:bg-[#763c32] transition">
             Services
         </a>
-
         <a routerLink="/contact"
             class="mt-8 inline-block bg-[#9c544e] text-white px-6 py-3 rounded-lg hover:bg-[#763c32] transition">
             Contact
         </a>
     </div>
 
+    <!-- Fond semi-transparent -->
+    <div class="absolute inset-0 bg-black opacity-40"></div>
 
     <!-- Hero Content -->
-    <div class="absolute inset-0 bg-black opacity-30 z-0"></div> <!-- Fond semi-transparent -->
-    <div class="text-center z-10 relative text-white">
-        <h1 class="text-7xl font-extrabold tracking-wide text-shadow">
+    <div class="relative text-center z-20 text-white px-4 pt-[96px] md:pt-[120px]">
+        <h1 class="text-6xl sm:text-5xl font-extrabold tracking-wide text-shadow">
             ANGILION
         </h1>
-        <h2 class="text-3xl font-semibold text-shadow">
+        <h2 class="text-3xl sm:text-2xl font-semibold text-shadow">
             Conseils & Services
         </h2>
-        <p class="text-xl max-w-3xl mx-auto mt-2">
-            pour vous accompagner dans vos projets et optimiser votre quotidien.
+        <p class="text-xl sm:text-lg max-w-xl mx-auto mt-2">
+            Pour vous accompagner dans vos projets et optimiser votre quotidien.
         </p>
 
-        <h2 class="text-4xl font-bold mt-6">
+        <h2 class="text-4xl sm:text-3xl font-bold mt-6">
             Transformez votre travail au quotidien
         </h2>
-        <p class="text-lg max-w-3xl mx-auto">
+        <p class="text-lg sm:text-base max-w-xl mx-auto mb-16">
             Solutions sur mesure pour améliorer votre fonctionnement, IT, marketing et gestion d’entreprise.
         </p>
         <a routerLink="/services"
