@@ -4,15 +4,15 @@
     <div class="flex items-center space-x-4 sm:flex-col sm:items-center sm:text-center">
         <a routerLink="/" class="flex items-end space-x-4">
             <img src="assets/logo only transp.png" alt="Logo" class="h-12 w-auto" />
-            <h1 class="text-4xl font-bold text-customGreen sm:text-2xl">ANGILION</h1>
-            <h2 class="text-1xl font-bold text-[#9c544e] sm:text-sm">Conseils & Services</h2>
+            <h1 class="text-4xl font-serif text-customGreen sm:text-2xl">ANGILION</h1>
+            <h2 class="text-1xl font-semibold text-[#9c544e] sm:text-sm">Conseils & Services</h2>
         </a>
     </div>
 
     <!-- Menu déroulant -->
     <div class="relative">
         <!-- Icône du menu -->
-        <button class="text-customGreen hover:text-green-500 focus:outline-none sm:hidden" (click)="toggleMenu()">
+        <button class="text-customGreen hover:text-green-500 focus:outline-none" (click)="toggleMenu()">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
@@ -21,7 +21,7 @@
 
         <!-- Liste déroulante -->
         <ul *ngIf="menuOpen"
-            class="menu-dropdown absolute right-0 mt-2 bg-white border border-gray-300 shadow-md rounded-md py-2 text-gray-800 sm:mt-4 sm:left-0 sm:w-full sm:bg-gray-100 sm:flex sm:flex-col sm:items-center">
+            class="menu-dropdown absolute right-0 mt-2 bg-white border border-gray-300 shadow-md rounded-md py-2 text-gray-800">
             <li class="px-4 py-2 hover:bg-gray-100"><a routerLink="/">Accueil</a></li>
             <li class="px-4 py-2 hover:bg-gray-100"><a routerLink="/services">Services</a>
             </li>

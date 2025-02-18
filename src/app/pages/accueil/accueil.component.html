@@ -1,23 +1,23 @@
 <app-header></app-header>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<section
-    class="hero relative min-h-screen bg-cover bg-center text-white flex items-center justify-center overflow-hidden"
-    style="background-image: url('assets/background_desk-954_1280.jpg')">
+<section class="hero relative min-h-screen bg-cover bg-center text-white flex flex-col items-center justify-center
+    overflow-hidden" style="background-image: url('assets/background_desk-954_1280.jpg')">
 
     <!-- Sommaire Section -->
-    <div class="sommaire absolute top-8 left-0 w-full flex justify-center space-x-20 z-10">
+    <div
+        class="sommaire absolute w-full flex top-0 left-0 justify-center space-x-20 z-10 px-4 pt-4 md:pt-6 hidden sm:flex">
 
         <a routerLink="/"
-            class="mt-8 inline-block bg-[#9c544e] text-white px-6 py-3 rounded-lg hover:bg-[#763c32] transition">
+            class="inline-block bg-[#9c544e] text-white px-6 py-3 rounded-lg hover:bg-[#763c32] transition">
             Accueil
         </a>
         <a routerLink="/services"
-            class="mt-8 inline-block bg-[#9c544e] text-white px-6 py-3 rounded-lg hover:bg-[#763c32] transition">
+            class="inline-block bg-[#9c544e] text-white px-6 py-3 rounded-lg hover:bg-[#763c32] transition">
             Services
         </a>
         <a routerLink="/contact"
-            class="mt-8 inline-block bg-[#9c544e] text-white px-6 py-3 rounded-lg hover:bg-[#763c32] transition">
+            class="inline-block bg-[#9c544e] text-white px-6 py-3 rounded-lg hover:bg-[#763c32] transition">
             Contact
         </a>
     </div>
@@ -26,27 +26,31 @@
     <div class="absolute inset-0 bg-black opacity-40"></div>
 
     <!-- Hero Content -->
-    <div class="relative text-center z-20 text-white px-4 pt-[96px] md:pt-[120px]">
-        <h1 class="text-6xl sm:text-5xl font-extrabold tracking-wide text-shadow">
-            ANGILION
-        </h1>
-        <h2 class="text-3xl sm:text-2xl font-semibold text-shadow">
-            Conseils & Services
-        </h2>
-        <p class="text-xl sm:text-lg max-w-xl mx-auto mt-2">
-            Pour vous accompagner dans vos projets et optimiser votre quotidien.
-        </p>
+    <div class="relative flex flex-col items-center text-center z-20 text-white px-4 pt-4 md:pt-6">
+        <div class="flex-1 flex flex-col justify-center">
+            <h1 class="text-6xl sm:text-6xl font-serif tracking-wide text-shadow">
+                ANGILION
+            </h1>
+            <h2 class="text-3xl sm:text-2xl font-semibold text-shadow mb-4">
+                Conseils & Services
+            </h2>
 
-        <h2 class="text-4xl sm:text-3xl font-bold mt-6">
-            Transformez votre travail au quotidien
-        </h2>
-        <p class="text-lg sm:text-base max-w-xl mx-auto mb-16">
-            Solutions sur mesure pour améliorer votre fonctionnement, IT, marketing et gestion d’entreprise.
-        </p>
-        <a routerLink="/services"
-            class="mt-8 inline-block bg-[#9c544e] text-white px-6 py-3 rounded-lg hover:bg-[#763c32] transition">
-            Commencez votre transformation maintenant
-        </a>
+            <h2 class="text-4xl sm:text-3xl font-semibold mt-16">
+                Pour vous accompagner dans vos projets et transformez votre travail au quotidien
+            </h2>
+            <p class="text-2xl sm:text-lg max-w-xl mx-auto text-shadow mt-4 mb-4">
+                Solutions sur mesure pour améliorer votre fonctionnement, IT, marketing et gestion d’entreprise.
+            </p>
+        </div>
+
+        <!-- Bouton placé en bas -->
+        <div class="mt-24 mb-6 md:mb-2">
+            <a routerLink="/services"
+                class="inline-block bg-[#9c544e] text-white px-6 py-3 rounded-lg hover:bg-[#763c32] transition">
+                Commencez votre transformation maintenant
+            </a>
+        </div>
+
     </div>
 </section>
 
