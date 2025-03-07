@@ -15,7 +15,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             <!-- Cartes des services -->
             <div *ngFor="let service of services; let i = index"
-                class="bg-white rounded-lg shadow-lg border-t-4 border-[#9c544e] p-6 transition-transform hover:scale-105"
+                class="service-card bg-white rounded-lg shadow-lg border-t-4 border-[#9c544e] p-6 transition-transform hover:scale-105"
                 [ngClass]="{'border-t-[#7b423b]': expanded[i]}">
                 <!-- Titre avec icône -->
                 <div class="cursor-pointer flex items-center space-x-4" (click)="toggleText(i)">

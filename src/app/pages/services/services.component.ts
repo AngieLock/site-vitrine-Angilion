@@ -20,6 +20,8 @@ export class ServicesComponent {
   // Import des données des services
   services: Service[] = SERVICES;
 
+  rowMap: Map<number, number[]> = new Map();
+
   constructor(private route: ActivatedRoute, private sanitizer: DomSanitizer) {
     // Initialisez avec `false` pour chaque carte
     this.expanded = Array(this.services.length).fill(false);
@@ -34,6 +36,39 @@ export class ServicesComponent {
     });
   }
 
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      this.calculateRows();
+      window.addEventListener("resize", () => this.calculateRows());
+    }, 300); // On attend un peu pour être sûr que le DOM est bien prêt
+  }
+
+  calculateRows(): void {
+    const cardElements = document.querySelectorAll(".service-card");
+    if (cardElements.length === 0) return;
+
+    this.rowMap.clear();
+    let previousTop = -1;
+    let rowIndex = 0;
+    let row: number[] = [];
+
+    cardElements.forEach((el, index) => {
+      const rect = el.getBoundingClientRect();
+      if (previousTop !== -1 && rect.top !== previousTop) {
+        this.rowMap.set(rowIndex, row);
+        rowIndex++;
+        row = [];
+      }
+      row.push(index);
+      previousTop = rect.top;
+    });
+
+    if (row.length) {
+      this.rowMap.set(rowIndex, row);
+    }
+  }
+
+
   scrollToService(id: string): void {
     const serviceMap: { [key: string]: number } = {
       optimisation: 0,
@@ -47,19 +82,30 @@ export class ServicesComponent {
 
     const index = serviceMap[id];
     if (index !== undefined) {
-      this.expanded[index] = true; // Dérouler le service correspondant
-
-      window.scrollTo(0, 200);
-
+      window.scrollTo(0, 180);
       setTimeout(() => {
-        const element = document.getElementById(id);
-        element?.scrollIntoView({ behavior: 'smooth' });
-      }, 100); // Attendre un court instant pour s'assurer que le DOM est prêt
+        this.toggleText(index);
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+      }, 500);
     }
   }
+
   toggleText(index: number): void {
-    // Basculer l'état pour l'élément cliqué
-    this.expanded[index] = !this.expanded[index];
+    let found = false;
+
+    this.rowMap.forEach((row) => {
+      if (row.includes(index)) {
+        found = true;
+        const currentState = this.expanded[index]; // Vérifier l’état actuel
+        row.forEach((i) => {
+          this.expanded[i] = !currentState; // Appliquer le même état pour tous
+        });
+      }
+    });
+
+    if (!found) {
+      console.error(`Aucune ligne trouvée pour l'index ${index}`);
+    }
   }
 
   getServiceIcon(icon: string): SafeHtml {

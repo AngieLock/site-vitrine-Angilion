@@ -29,20 +29,18 @@ export const SERVICES: Service[] = [
         id: 'dashboards',
         title: 'Transformez vos données en décisions stratégiques',
         description: 'Grâce à nos dashboards personnalisés et nos formations, exploitez vos données pour des prises de décisions éclairées et gagnez en autonomie sur l’analyse de vos performances. Nos services comprennent :',
-        list: ['Création de tableaux de bord sur mesure',
-            'Analyse de vos données clés',
+        list: ['Création de tableaux de bord sur mesure (Excel, Power BI, Tableau)',
             'Formation pour développer vos compétences en data',
-            'Automatisation de vos rapports',
-            'Création de tableaux de bord (Excel, Power BI, Tableau)'],
+            'Automatisation de vos rapports'],
         icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
 <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 14.25v2.25m3-4.5v4.5m3-6.75v6.75m3-9v9M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z" />
 </svg>`
     },
     {
         id: 'prestataires',
-        title: 'Nous gérons vos projets IT pendant que vous vous concentrez sur votre activité',
+        title: 'Vos projets informatiques, gérés avec expertise',
         description: 'Bénéficiez de notre expertise pour coordonner vos projets informatiques et web avec des prestataires fiables, tout en garantissant qualité et conformité. Nos engagements :',
-        list: ['Gestion de projet complète (web, IT)',
+        list: ['Gestion de projet complète (web, logiciels, site internet)',
             'Rédaction de cahiers des charges précis',
             'Suivi et contrôle qualité des livrables',
             'Mise en relation avec des partenaires de confiance',],

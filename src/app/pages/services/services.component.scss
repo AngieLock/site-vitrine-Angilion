@@ -16,11 +16,7 @@
 
 
 /* Titres */
-.service-card h3 {
-    cursor: pointer;
-    color: #9c544e;
-    font-weight: 600;
-}
+.service-card h3 {}
 
 /* Conteneur texte */
 .text-container {
@@ -38,15 +34,14 @@
 /* Liste d'éléments */
 .service-card ul li {
     color: #4a4a4a;
-    font-size: 1rem;
-    line-height: 1.2;
+    line-height: 1.625;
+    font-size: 0.875rem;
     position: relative;
     padding-left: 0;
     padding-bottom: 0;
+    margin-bottom: 1rem;
 
     &:after {
-        content: '•';
-        color: #9c544e;
         font-size: 1.5rem;
         display: block;
         text-align: center;
