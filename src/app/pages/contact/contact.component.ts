@@ -14,7 +14,7 @@ import * as L from 'leaflet';
 })
 export class ContactComponent implements AfterViewInit {
 
-  email: string = 'honjanapi@gmail.com';
+  email: string = 'contact@angilion.com';
   private map!: L.Map;
 
   ngAfterViewInit(): void {
